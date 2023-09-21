@@ -10,5 +10,5 @@
 #
 class Enrollment < ApplicationRecord
     has_many :student
-    belongs_to :course
+    has_many :course
 end

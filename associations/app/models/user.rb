@@ -8,6 +8,8 @@
 #  updated_at :datetime         not null
 #
 class User < ApplicationRecord
-    belongs_to :enrollment
-    has_many :enrolled_courses
+    has_many :courses,
+        primary_key: :id,
+        foreign_key: :instructor_id,
+        class_name: :Course
 end
